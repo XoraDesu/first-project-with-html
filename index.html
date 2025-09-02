@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Registrasi</title>
+</head>
+
+<body>
+    <h1>Formulir Pendaftaran</h1>
+    <p>Bergabunglah dengan komunitas kami</p>
+    <form>
+        <Fieldset>
+            <legend>Informasi Pribadi</legend>
+
+            <label for="input-nama">Nama Lengkap : </label>
+            <input type="text" name="input-nama" id="input-nama" placeholder="Masukkan nama lengkap"
+                pattern="[A-Za-z ]+" title="Masukkan Nama Anda, Nama tidak boleh mengandung angka atau karakter spesial"
+                required>
+
+            <br />
+            <label for="input-email">Alamat Email : </label>
+            <input type="email" name="input-email" id="input-email" placeholder="contoh@gmail.com"
+                title="Masukkan Alamat Email Anda" required>
+
+            <br />
+            <label for="input-password">Password : </label>
+            <input type="password" name="input-password" id="input-password" placeholder="minimal 8 karakter"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&].{8,}"
+                title="Minimal 8 karakter, termasuk huruf besar, huruf kecil, angka, dan simbol" required>
+
+            <br />
+            <label for="input-tanggal-lahir">Tanggal Lahir : </label>
+            <input type="date" name="input-tanggal-lahir" id="input-tanggal-lahir">
+
+            <br />
+            <label for="input-nomor-hp">Nomor HP : </label>
+            <input type="number" name="input-nomor-hp" id="input-nomor-hp" placeholder="0812-3456-7890" min="0"
+                title="Masukkan Nomor HP Anda" required>
+        </Fieldset>
+        <fieldset>
+            <legend>Informasi Tambahan</legend>
+
+            <label>Jenis Kelamin : </label>
+            <br />
+            <input type="radio" name="gender" id="male">
+            <label for="male">Laki-Laki</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Perempuan</label>
+
+            <br />
+            <label for="input-provinsi">Provinsi : </label>
+            <select name="input-provinsi" id="input-provinsi">
+                <option value="none">Pilih Provinsi</option>
+                <option value="aceh">Aceh</option>
+                <option value="bali">Bali</option>
+                <option value="bangka-belitung">Bangka Belitung</option>
+                <option value="banten">Banten</option>
+                <option value="bengkulu">Bengkulu</option>
+                <option value="di-yogyakarta">DI Yogyakarta</option>
+                <option value="dki-jakarta">DKI Jakarta</option>
+                <option value="gorontalo">Gorontalo</option>
+                <option value="jambi">Jambi</option>
+                <option value="jawa-barat">Jawa Barat</option>
+                <option value="jawa-tengah">Jawa Tengah</option>
+                <option value="jawa-timur">Jawa Timur</option>
+                <option value="kalimantan-barat">Kalimantan Barat</option>
+                <option value="kalimantan-selatan">Kalimantan Selatan</option>
+                <option value="kalimantan-tengah">Kalimantan Tengah</option>
+                <option value="kalimantan-timur">Kalimantan Timur</option>
+                <option value="kalimantan-utara">Kalimantan Utara</option>
+                <option value="kepulauan-riau">Kepulauan Riau</option>
+                <option value="lampung">Lampung</option>
+                <option value="maluku">Maluku</option>
+                <option value="maluku-utara">Maluku Utara</option>
+                <option value="nusa-tenggara-barat">Nusa Tenggara Barat</option>
+                <option value="nusa-tenggara-timur">Nusa Tenggara Timur</option>
+                <option value="papua">Papua</option>
+                <option value="papua-barat">Papua Barat</option>
+                <option value="papua-barat-daya">Papua Barat Daya</option>
+                <option value="papua-pegunungan">Papua Pegunungan</option>
+                <option value="papua-selatan">Papua Selatan</option>
+                <option value="papua-tengah">Papua Tengah</option>
+                <option value="riau">Riau</option>
+                <option value="sulawesi-barat">Sulawesi Barat</option>
+                <option value="sulawesi-selatan">Sulawesi Selatan</option>
+                <option value="sulawesi-tengah">Sulawesi Tengah</option>
+                <option value="sulawesi-tenggara">Sulawesi Tenggara</option>
+                <option value="sulawesi-utara">Sulawesi Utara</option>
+                <option value="sumatera-barat">Sumatera Barat</option>
+                <option value="sumatera-selatan">Sumatera Selatan</option>
+                <option value="sumatera-utara">Sumatera Utara</option>
+
+            </select>
+
+            <br />
+            <label>Hobi (bisa milih lebih dari satu) : </label>
+            <br />
+            <input type="checkbox" value="membaca" id="membaca"><label for="membaca">Membaca</label><input
+                type="checkbox" value="olahraga" id="olahraga"><label for="olahraga">Olahraga</label><input
+                type="checkbox" value="musik" id="musik"><label for="musik">Musik</label><input type="checkbox"
+                value="traveling" id="traveling"><label for="traveling">Traveling</label>
+
+            <br>
+            <label for="input-bio">Biodata Singkat : </label>
+            <textarea name="input-bio" id="input-bio" placeholder="Ceritakan sedikit tentang diri anda"
+                rows="4"></textarea>
+
+            <br />
+            <label for="input-profile">Upload Foto Profil : </label>
+            <input type="file" name="input-profile" id="input-profile">
+        </fieldset>
+        <input type="checkbox" name="agreement" id="agreement"><label for="agreement">Saya menyetujui <a href="">syarat
+                dan ketentuan</a> yang berlaku</label>
+        <br />
+        <button type="submit">Daftar Sekarang</button> <button type="reset">Reset Form</button>
+    </form>
+</body>
+</body>
+
+</html>
