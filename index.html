@@ -27,12 +27,12 @@
             <br />
             <label for="input-password">Password : </label>
             <input type="password" name="input-password" id="input-password" placeholder="minimal 8 karakter"
-                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&].{8,}"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
                 title="Minimal 8 karakter, termasuk huruf besar, huruf kecil, angka, dan simbol" required>
 
             <br />
             <label for="input-tanggal-lahir">Tanggal Lahir : </label>
-            <input type="date" name="input-tanggal-lahir" id="input-tanggal-lahir">
+            <input type="date" name="input-tanggal-lahir" id="input-tanggal-lahir" title="Tolong Sertakan Tanggal Lahir anda" required>
 
             <br />
             <label for="input-nomor-hp">Nomor HP : </label>
